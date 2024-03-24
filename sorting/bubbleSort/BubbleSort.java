@@ -1,22 +1,22 @@
-public class selecton {
+public class BubbleSort {
 
     void sort(int arr[])
     {
          int n = arr.length;
-         for(int i = 0 ; i<=n-2; i++)
+         for(int i = 0; i<n-1; i++)
          {
-            int min = i;
-            for(int j = i; j<=n-1;j++)
+           
+            for(int j = 0; j<n-1-i;j++)
             {
-                if(arr[j]<arr[min])
+                if(arr[j]>arr[j+1])
                 {
-                    min = j;
+                    int temp = arr[j];
+                    arr[j] =  arr[j+1];
+                    arr[j+1] = temp;
                 }
             }
 
-            int temp = arr[min];
-            arr[min] = arr[i];
-            arr[i] = temp;
+            
          }
     }
 
@@ -32,15 +32,12 @@ public class selecton {
 
     }
     public static void main(String[] args) {
-         
-        selecton ob = new selecton();
+        BubbleSort ob = new BubbleSort();
         int arr[] = { 64, 25, 12, 22, 11 }; 
         ob.sort(arr);
         System.out.println("Sorted array"); 
         ob.printArray(arr);
     }
 }
-
-
 // TIME COMPLEXITY ------> O(N^2)
 // SPACE COMPLEXITY ------>O(1)

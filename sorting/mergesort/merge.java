@@ -82,3 +82,7 @@ public class merge {
 
     }
 }
+
+
+// TIME COMPLEXITY ------> O(NLOGN)
+// SPACE COMPLEXITY ------>O(N)
